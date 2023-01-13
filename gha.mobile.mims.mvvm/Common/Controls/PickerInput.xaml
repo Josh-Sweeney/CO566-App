@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:gha.mobile.mims.mvvm.Controls" 
+             xmlns:resources="clr-namespace:gha.mobile.common.mvvm;assembly=gha.mobile.common.mvvm"
+             x:Class="gha.mobile.mims.mvvm.Controls.PickerInput"
+             x:DataType="local:PickerInput"
+             x:Name="PickerInputControl">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:ResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <StackLayout Style="{StaticResource BaseStackLayout}" Margin="0,0,0,0">
+        <Label x:Name="HeaderControl" Text="{Binding Header}" Style="{StaticResource ContentText}" Margin="40,0,0,0"/>
+        <Frame Style="{StaticResource Frame}" Margin="30,0">
+            <Picker 
+                x:Name="PickerControl" 
+                Style="{StaticResource InputPicker}"
+                SelectedIndexChanged="PickerControl_SelectedIndexChanged"/>
+        </Frame>
+    </StackLayout>
+</ContentView>

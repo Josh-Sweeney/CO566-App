@@ -1,0 +1,132 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:controls="clr-namespace:gha.mobile.mims.mvvm.Controls"
+             xmlns:resources="clr-namespace:gha.mobile.common.mvvm;assembly=gha.mobile.common.mvvm"
+             xmlns:mvvm="clr-namespace:gha.mobile.mims.mvvm;assembly=gha.mobile.mims.mvvm"
+             xmlns:toolbar="clr-namespace:gha.mobile.mims.mvvm.Controls.Toolbar;assembly=gha.mobile.mims.mvvm"
+             x:Class="gha.mobile.mims.mvvm.LoginView"
+             x:DataType="mvvm:LoginViewModel"
+             NavigationPage.HasBackButton="True"
+             Title="{Binding AppTitle}"
+             BackgroundColor="{Binding BackgroundColor}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:ResourceDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView Orientation="{Binding ScrollViewOrientation}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*" /> <!-- Logo -->
+                <RowDefinition Height="70*" /> <!-- Login Form -->
+            </Grid.RowDefinitions>
+
+            <!-- Logo -->
+            <Grid Grid.Row="0"
+                  VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.ColumnSpan="3"
+                       Text="{Binding Employee}"
+                       TextColor="{Binding ForegroundColor}"
+                       HorizontalOptions="CenterAndExpand" />
+                <Image Grid.Row="1"
+                       Grid.Column="1"
+                       Aspect="AspectFill"
+                       Source="{Binding LogoSource, Converter={StaticResource ByteArrayToImage}}"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand" />
+            </Grid>
+
+            <!-- Login Form -->
+            <Grid Grid.Row="1"
+                  RowDefinitions="Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{OnIdiom Desktop=1*, Tablet=1*, Phone=16}" />
+                    <ColumnDefinition Width="{OnIdiom Desktop=3*, Tablet=4*, Phone=*}" />
+                    <ColumnDefinition Width="{OnIdiom Desktop=1*, Tablet=1*, Phone=16}" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0"
+                             Grid.Column="1"
+                             Margin="0,0,0,0">
+                    <Label Text="Employee ID"
+                           Margin="40,0,0, 0"
+                           BackgroundColor="{Binding BackgroundColor}"
+                           TextColor="{Binding ForegroundColor}"
+                           FontSize="Small"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center" />
+                    <Frame IsClippedToBounds="true"
+                           Padding="5"
+                           CornerRadius="10"
+                           BackgroundColor="{Binding ForegroundColor}"
+                           Margin="30,0,30,20">
+                        <Picker Margin="10,0,10,0"
+                                BackgroundColor="{Binding ForegroundColor}"
+                                TextColor="{Binding BackgroundColor}"
+                                ItemDisplayBinding="{Binding Name}"
+                                ItemsSource="{Binding Employees}"
+                                SelectedItem="{Binding EmployeePicked, Mode=TwoWay}" />
+                    </Frame>
+
+                    <Label Text="Site"
+                           Margin="40,0,0, 0"
+                           BackgroundColor="{Binding BackgroundColor}"
+                           TextColor="{Binding ForegroundColor}"
+                           FontSize="Small"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center" />
+                    <Frame IsClippedToBounds="true"
+                           Padding="5"
+                           CornerRadius="10"
+                           BackgroundColor="{Binding ForegroundColor}"
+                           Margin="30,0,30,20">
+
+                        <Picker Margin="10,0,10,0"
+                                BackgroundColor="{Binding ForegroundColor}"
+                                TextColor="{Binding BackgroundColor}"
+                                ItemDisplayBinding="{Binding SiteName}"
+                                ItemsSource="{Binding Sites}"
+                                SelectedItem="{Binding SitePicked, Mode=TwoWay}" />
+                    </Frame>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30*" />
+                            <ColumnDefinition Width="40*" />
+                            <ColumnDefinition Width="30*" />
+                        </Grid.ColumnDefinitions>
+                        <Button Command="{Binding LoginCommand}"
+                                Grid.Column="1"
+                                Text="Log in"
+                                IsEnabled="{Binding AreButtonsEnabled}"
+                                BackgroundColor="{Binding ForegroundColor}"
+                                TextColor="{Binding BackgroundColor}"
+                                Margin="0,10,0,0"
+                                CornerRadius="10" />
+                    </Grid>
+                    <Label Text="{Binding Message}"
+                           IsVisible="{Binding IsMessageVisible}"
+                           Margin="40,0,0, 0"
+                           BackgroundColor="{Binding BackgroundColor}"
+                           TextColor="{Binding ForegroundColor}"
+                           FontSize="Small"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center" />
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

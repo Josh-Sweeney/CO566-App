@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="sqlite-net-sqlcipher" Version="1.8.116" />
+		<PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
+		<PackageReference Include="RestSharp" Version="106.12.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\gha.mobile.common.entities\gha.mobile.common.entities.csproj" />
+		<ProjectReference Include="..\gha.mobile.common.helpers\gha.mobile.common.helpers.csproj" />
+		<ProjectReference Include="..\gha.mobile.common.converters\gha.mobile.common.converters.csproj" />
+		<ProjectReference Include="..\gha.mobile.mims.entities\gha.mobile.mims.entities.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Reference Include="LicenseServerHelper">
+			<HintPath>..\assemblies\LicenseServerHelper.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Remove="MainView.xaml.cs" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="RestSharp" />
+	</ItemGroup>
+</Project>

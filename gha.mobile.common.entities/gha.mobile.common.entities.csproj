@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EpicorRESTAPIStandard" Version="1.1.11" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+		<PackageReference Include="sqlite" Version="3.13.0" />
+		<PackageReference Include="sqlite-net-sqlcipher" Version="1.8.116" />
+	</ItemGroup>
+</Project>

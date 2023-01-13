@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:converters="clr-namespace:gha.mobile.common.converters;assembly=gha.mobile.common.converters"
+             x:Class="mims.Views.MainView"
+             ControlTemplate="{StaticResource MainViewTemplate}"
+             NavigationPage.HasBackButton="False"
+             Title="{Binding AppTitle}"
+             BackgroundColor= "{Binding BackgroundColor}">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Grid.Row="0" Margin="0,30,0,0">
+            <Label Text="{Binding AppVersionText}" TextColor="{Binding ForegroundColor}" Margin="20,0,20,0" FontSize="Title" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        </StackLayout>
+
+        <Grid Grid.Row="1">
+            <StackLayout Grid.Row="0" Margin="0,30,0,0">
+                <Label Text="{Binding AppVersion}" TextColor="{Binding ForegroundColor}" Margin="0,0,0,0" FontSize="Small" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+            </StackLayout>
+        </Grid>
+
+        <StackLayout Grid.Row="2">
+            <Button x:Name="OKButton" Command="{Binding DemoStartUp}" Text="OK" TextColor="{Binding BackgroundColor}" IsEnabled="{Binding AreButtonsEnabled}" BackgroundColor="{Binding ForegroundColor}" Margin="10" HeightRequest="40" BorderRadius="10" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>

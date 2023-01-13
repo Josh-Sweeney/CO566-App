@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:resources="clr-namespace:gha.mobile.common.mvvm;assembly=gha.mobile.common.mvvm"
+             mc:Ignorable="d"
+             xmlns:toolbar="clr-namespace:gha.mobile.mims.mvvm.Controls.Toolbar;assembly=gha.mobile.mims.mvvm"
+             xmlns:mvvm="clr-namespace:gha.mobile.mims.mvvm;assembly=gha.mobile.mims.mvvm"
+             x:Class="gha.mobile.mims.mvvm.MainMenuView"
+             x:DataType="mvvm:MainMenuViewModel"
+             ControlTemplate="{StaticResource MainViewTemplate}"
+             NavigationPage.HasBackButton="False"
+             Title="{Binding AppTitle}"
+             BackgroundColor="{Binding BackgroundColor}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:ResourceDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <toolbar:LogoutToolbarItem Command="{Binding LogoutCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Neither">
+            <Grid ColumnSpacing="0"
+                  RowSpacing="0"
+                  RowDefinitions="16, 75*, 15*">
+                <Grid Grid.Row="1"
+                      RowDefinitions="Auto, Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="{OnIdiom Desktop=1*, Tablet=1*, Phone=16}" />
+                        <ColumnDefinition Width="{OnIdiom Desktop=3*, Tablet=4*, Phone=*}" />
+                        <ColumnDefinition Width="{OnIdiom Desktop=1*, Tablet=1*, Phone=16}" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Column="1">
+                        <Label Text="Main Menu"
+                               Margin="0,10,0,10"
+                               Style="{StaticResource ContentSubtitle}" />
+
+                            <Grid Grid.Column="1"
+                                  ColumnDefinitions="*, *"
+                                  RowDefinitions="Auto, Auto">
+
+                                <Button Grid.Row="0"
+                                        Grid.Column="0"
+                                        Text="Part Enquiry"
+                                        Style="{StaticResource ButtonNoHeight}"
+                                        Command="{Binding PartEnquiryCommand}"/>
+
+                                <Button Grid.Row="0"
+                                        Grid.Column="1"
+                                        Text="Bin Enquiry"
+                                        Style="{StaticResource ButtonNoHeight}"
+                                        Command="{Binding BinEnquiryCommand}"/>
+                                
+                            </Grid>
+                    </StackLayout>
+
+
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

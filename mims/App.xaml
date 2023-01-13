@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="mims.App"
+             xmlns:converters="clr-namespace:gha.mobile.common.converters;assembly=gha.mobile.common.converters">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <converters:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        <ControlTemplate x:Key="MainViewTemplate">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5*" />
+                    <RowDefinition Height="20*" />
+                    <RowDefinition Height="70*" />
+                    <RowDefinition Height="5*" />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.ColumnSpan="3" Text="{TemplateBinding BindingContext.Employee}"
+                           TextColor="{TemplateBinding BindingContext.ForegroundColor}" HorizontalOptions="CenterAndExpand" />
+                    <Image Grid.Row="1" Grid.Column="1" Aspect="AspectFill"  Source="{ TemplateBinding BindingContext.LogoSource, Converter={StaticResource ByteArrayToImage}}" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <ContentPresenter />
+                </Grid>
+                <Grid Grid.Row="3">
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>
+
+
+

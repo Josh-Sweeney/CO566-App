@@ -1,0 +1,652 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.license/gha.mobile.common.license.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj": {},
+    "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/gha.mobile.mims.mvvm.csproj": {},
+    "/Users/peterroden/Projects/mobile/mims/mims.csproj": {}
+  },
+  "projects": {
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj",
+        "projectName": "gha.mobile.common.converters",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj",
+        "projectName": "gha.mobile.common.entities",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            },
+            "sqlite": {
+              "target": "Package",
+              "version": "[3.13.0, )"
+            },
+            "sqlite-net-sqlcipher": {
+              "target": "Package",
+              "version": "[1.7.335, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj",
+        "projectName": "gha.mobile.common.helpers",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Plugin.Permissions": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Xam.Plugin.Connectivity": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.license/gha.mobile.common.license.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.license/gha.mobile.common.license.csproj",
+        "projectName": "gha.mobile.common.license",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.license/gha.mobile.common.license.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.license/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj",
+        "projectName": "gha.mobile.common.mvvm",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Plugin.DeviceOrientation": {
+              "target": "Package",
+              "version": "[1.0.7, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            },
+            "ZXing.Net.Mobile.Forms": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj",
+        "projectName": "gha.mobile.common.repositories",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "sqlite-net-sqlcipher": {
+              "target": "Package",
+              "version": "[1.7.335, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj",
+        "projectName": "gha.mobile.common.resolver",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/gha.mobile.mims.mvvm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/gha.mobile.mims.mvvm.csproj",
+        "projectName": "gha.mobile.mims.mvvm",
+        "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/gha.mobile.mims.mvvm.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/peterroden/Projects/mobile/mims/mims.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/peterroden/Projects/mobile/mims/mims.csproj",
+        "projectName": "mims",
+        "projectPath": "/Users/peterroden/Projects/mobile/mims/mims.csproj",
+        "packagesPath": "/Users/peterroden/.nuget/packages/",
+        "outputPath": "/Users/peterroden/Projects/mobile/mims/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/peterroden/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.converters/gha.mobile.common.converters.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.entities/gha.mobile.common.entities.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.helpers/gha.mobile.common.helpers.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.license/gha.mobile.common.license.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.license/gha.mobile.common.license.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.mvvm/gha.mobile.common.mvvm.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.repositories/gha.mobile.common.repositories.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.common.resolver/gha.mobile.common.resolver.csproj"
+              },
+              "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/gha.mobile.mims.mvvm.csproj": {
+                "projectPath": "/Users/peterroden/Projects/mobile/gha.mobile.mims.mvvm/gha.mobile.mims.mvvm.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Autofac": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[3.3.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.8.0.1687, )"
+            },
+            "sqlite-net-sqlcipher": {
+              "target": "Package",
+              "version": "[1.7.335, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

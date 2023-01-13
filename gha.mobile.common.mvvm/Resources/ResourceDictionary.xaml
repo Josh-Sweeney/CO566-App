@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="gha.mobile.common.mvvm.ResourceDictionary">
+
+    <!-- #region Label Styles -->
+
+    <Style x:Key="BaseLabel" TargetType="Label">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}"/>
+        <Setter Property="TextColor" Value="{DynamicResource ForegroundColor}"/>
+    </Style>
+
+    <Style x:Key="AppletTitle" BasedOn="{StaticResource BaseLabel}" TargetType="Label">
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="TableRowTitle" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Small"/>
+    </Style>
+
+    <Style x:Key="TableRowText" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="LineBreakMode" Value="TailTruncation"/>
+    </Style>
+
+    <Style x:Key="ContentHeader" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="Large"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ContentSubtitle" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontSize" Value="Medium"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="ContentText" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="EntryLabel" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HorizontalTextAlignment" Value="Start"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="PageTitle" TargetType="Label" BasedOn="{StaticResource BaseLabel}">
+        <Setter Property="FontSize" Value="Caption"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="FontAttributes" Value="Bold"/>
+    </Style>
+
+    <!-- #endregion -->
+
+    <!-- #region Button Styles -->
+    
+    <Style x:Key="Button" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ForegroundColor}"/>
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundColor}"/>
+        <Setter Property="HeightRequest" Value="80"/>
+        <Setter Property="BorderRadius" Value="10"/>
+    </Style>
+
+    <Style x:Key="ButtonNoHeight" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ForegroundColor}"/>
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundColor}"/>
+        <Setter Property="CornerRadius" Value="10"/>
+    </Style>
+
+    <Style x:Key="ScanButton" TargetType="Button" BasedOn="{StaticResource Button}">
+        <Setter Property="IsEnabled" Value="{Binding AreButtonsEnabled}"/>
+    </Style>
+
+    <Style x:Key="SelectButton" TargetType="Button" BasedOn="{StaticResource Button}">
+        <Setter Property="IsEnabled" Value="{Binding AreButtonsEnabled}"/>
+    </Style>
+
+    <!-- #endregion -->
+
+    <!-- #region Entry Styles -->
+
+    <Style x:Key="BaseEntry" TargetType="Entry">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ForegroundColor}"/>
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundColor}"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="Margin">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS">-5,0,-5,0</On>
+                    <On Platform="Android">5,0,5,0</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- #endregion -->
+    
+    <!-- #region Frame Styles -->
+
+    <Style x:Key="Frame" TargetType="Frame">
+        <Setter Property="IsClippedToBounds" Value="true"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="BackgroundColor" Value="{DynamicResource ForegroundColor}"/>
+    </Style>
+
+    <!-- #endregion -->
+
+    <!--#region Picker Styles -->
+
+    <Style x:Key="BasePicker" TargetType="Picker">
+        <Setter Property="BackgroundColor" Value="{DynamicResource ForegroundColor}"/>
+        <Setter Property="TextColor" Value="{DynamicResource BackgroundColor}"/>
+        <Setter Property="FontSize" Value="Small"/>
+        <Setter Property="HorizontalTextAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="InputPicker" BasedOn="{StaticResource BasePicker}" TargetType="Picker">
+        <Setter Property="VerticalTextAlignment" Value="Center"/>
+        <Setter Property="Margin">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS">-5,0,-5,0</On>
+                    <On Platform="Android">5,0,5,0</On>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--#endregion-->
+
+    <!-- #region StackLayout Styles -->
+
+    <Style x:Key="BaseStackLayout" TargetType="StackLayout">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BackgroundColor}"/>
+    </Style>
+
+    <!--#endregion-->
+
+</ResourceDictionary>

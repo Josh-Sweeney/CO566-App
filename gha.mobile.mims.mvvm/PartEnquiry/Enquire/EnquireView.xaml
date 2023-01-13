@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:gha.mobile.mims.mvvm.PartEnquiry.Enquire;assembly=gha.mobile.mims.mvvm"
+             xmlns:resources="clr-namespace:gha.mobile.common.mvvm;assembly=gha.mobile.common.mvvm"
+             xmlns:toolbar="clr-namespace:gha.mobile.mims.mvvm.Controls.Toolbar;assembly=gha.mobile.mims.mvvm"
+             xmlns:controls="clr-namespace:gha.mobile.mims.mvvm.Controls;assembly=gha.mobile.mims.mvvm"
+             x:Class="gha.mobile.mims.mvvm.PartEnquiry.EnquireView"
+             x:DataType="local:EnquireViewModel"
+             ControlTemplate="{StaticResource MainViewTemplate}"
+             NavigationPage.HasBackButton="True"
+             Title="{Binding AppTitle}"
+             BackgroundColor="{Binding BackgroundColor}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:ResourceDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.ToolbarItems>
+        <toolbar:HomeToolbarItem Command="{Binding HomeCommand}" />
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView Orientation="Neither">
+        <Grid ColumnSpacing="0"
+              RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="16" />
+                <RowDefinition Height="75*" />
+                <RowDefinition Height="15*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="{OnIdiom Desktop=1*, Tablet=1*, Phone=16}" />
+                    <ColumnDefinition Width="{OnIdiom Desktop=3*, Tablet=4*, Phone=*}" />
+                    <ColumnDefinition Width="{OnIdiom Desktop=1*, Tablet=1*, Phone=16}" />
+                </Grid.ColumnDefinitions>
+
+                
+                
+
+                <StackLayout Grid.Row="0"
+                             Grid.Column="1"
+                             Margin="0,0,0,0">
+                    <Label Text="Part Enquiry"
+                           Margin="0,10,0,10"
+                           BackgroundColor="{Binding BackgroundColor}"
+                           TextColor="{Binding ForegroundColor}"
+                           FontSize="Medium"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center" />
+                    
+                    <controls:EntryInput
+                        Header="Part Number"
+                        EntryText="{Binding PartNumber}"
+                        EntryKeyboard="Default" />
+                    
+                </StackLayout>
+
+            </Grid>
+
+            <controls:MIMSFooter Grid.Row="2">
+                <controls:MIMSButton Command="{Binding ScanCommand}"
+                                     Text="Scan" />
+                <controls:MIMSButton Command="{Binding SelectCommand}"
+                                     Text="Select" />
+            </controls:MIMSFooter>
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

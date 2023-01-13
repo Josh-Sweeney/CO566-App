@@ -1,0 +1,196 @@
+﻿<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:resources="clr-namespace:gha.mobile.common.mvvm;assembly=gha.mobile.common.mvvm"
+                    xmlns:entities="clr-namespace:gha.mobile.mims.entities;assembly=gha.mobile.mims.entities"
+                    x:Class="gha.mobile.mims.mvvm.PartEnquiry.Result.ListViewTemplateSelector.DataTemplates">
+
+    <ResourceDictionary.MergedDictionaries>
+        <resources:ResourceDictionary />
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- Listview item template for lot tracked parts -->
+
+    <DataTemplate x:Key="LotTrackedPartEnquiryResultListView"
+                  x:DataType="entities:PartBin">
+        <ViewCell IsEnabled="False">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.RowSpan="3"
+                         BackgroundColor="{DynamicResource Key=BackgroundColor}" />
+                <Grid Grid.Column="1"
+                      Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="15*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Text="LOCATION"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontAttributes="Bold"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="QTY"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="End"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="3"
+                           Text="UOM"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontAttributes="Bold"
+                           FontSize="Small" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*" />
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="15*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Text="{Binding Warehouse.Description}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="{Binding Quantity, StringFormat='{0:N}'}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           HorizontalTextAlignment="End"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="3"
+                           Text="{Binding UOM}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*" />
+                        <ColumnDefinition Width="30*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Text="{Binding Bin.Description}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10*" />
+                        <ColumnDefinition Width="90*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Text="Lot"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="{Binding LotNum}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                </Grid>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+
+    <!-- ListView item template for non lot tracked parts -->
+    <DataTemplate x:Key="NonLotTrackedPartEnquiryResultListView"
+                  x:DataType="entities:PartBin">
+        <ViewCell IsEnabled="False">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <BoxView Grid.RowSpan="3"
+                         BackgroundColor="{DynamicResource Key=BackgroundColor}" />
+                <Grid Grid.Column="1"
+                      Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="65*" />
+                        <ColumnDefinition Width="20*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="15*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Text="LOCATION"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontAttributes="Bold"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="QTY"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="End"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="3"
+                           Text="UOM"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontAttributes="Bold"
+                           FontSize="Small" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*" />
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="15*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Grid.Column="0"
+                           Text="{Binding Warehouse.Description}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="{Binding Quantity, StringFormat='{0:N}'}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           HorizontalTextAlignment="End"
+                           FontSize="Small" />
+                    <Label Grid.Row="0"
+                           Grid.Column="3"
+                           Text="{Binding UOM}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                </Grid>
+                <Grid Grid.Column="1"
+                      Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*" />
+                        <ColumnDefinition Width="30*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0"
+                           Text="{Binding Bin.Description}"
+                           TextColor="{DynamicResource Key=ForegroundColor}"
+                           FontSize="Small" />
+                </Grid>
+            </Grid>
+        </ViewCell>
+    </DataTemplate>
+</ResourceDictionary>

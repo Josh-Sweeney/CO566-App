@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:gha.mobile.mims.mvvm.Controls" 
+             xmlns:resources="clr-namespace:gha.mobile.common.mvvm;assembly=gha.mobile.common.mvvm"
+             x:Class="gha.mobile.mims.mvvm.Controls.EntryInput"
+             x:DataType="local:EntryInput"
+             x:Name="EntryInputControl">
+    
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resources:ResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    
+    <StackLayout 
+        Style="{StaticResource BaseStackLayout}" 
+        Margin="0,0,0,0"
+        IsEnabled="{Binding IsEnabled, Source={x:Reference EntryInputControl}}">
+        <Label 
+            Text="{Binding Header, Source={x:Reference EntryInputControl}}" 
+            Style="{StaticResource ContentText}" 
+            Margin="40,0,0,0"
+            IsEnabled="{Binding IsEnabled, Source={x:Reference EntryInputControl}}"/>
+        <Frame 
+            Style="{StaticResource Frame}" 
+            Margin="30,0"
+            IsEnabled="{Binding IsEnabled, Source={x:Reference EntryInputControl}}">
+            <Entry x:Name="Entry"
+                Style="{StaticResource BaseEntry}" 
+                Text="{Binding EntryText, Source={x:Reference EntryInputControl}}"
+                Keyboard="{Binding EntryKeyboard, Source={x:Reference EntryInputControl}}"
+                IsEnabled="{Binding IsEnabled, Source={x:Reference EntryInputControl}}"/>
+        </Frame>
+    </StackLayout>
+</ContentView>

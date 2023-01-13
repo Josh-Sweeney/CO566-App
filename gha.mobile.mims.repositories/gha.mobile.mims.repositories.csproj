@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="LicenseServerHelper">
+      <HintPath>..\assemblies\LicenseServerHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gha.mobile.common.repositories\gha.mobile.common.repositories.csproj" />
+    <ProjectReference Include="..\gha.mobile.mims.entities\gha.mobile.mims.entities.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EpicorRESTAPIStandard" Version="1.1.11" />
+    <PackageReference Include="SQLiteNetCipherExtensions.Async" Version="2.1.0" />
+  </ItemGroup>
+</Project>

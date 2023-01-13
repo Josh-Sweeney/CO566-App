@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\gha.mobile.common.converters\gha.mobile.common.converters.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.entities\gha.mobile.common.entities.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.helpers\gha.mobile.common.helpers.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.mvvm\gha.mobile.common.mvvm.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.repositories\gha.mobile.common.repositories.csproj" />
+    <ProjectReference Include="..\gha.mobile.mims.entities\gha.mobile.mims.entities.csproj" />
+    <ProjectReference Include="..\gha.mobile.mims.repositories\gha.mobile.mims.repositories.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.2" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BinEnquiry\" />
+    <Folder Include="PartEnquiry\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LicenseServerHelper">
+      <HintPath>..\assemblies\LicenseServerHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Common\Controls\EntryInput.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Controls\PickerInput.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Controls\PO_RMA_TypeSelection.xaml.cs">
+      <DependentUpon>PO_RMA_TypeSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Controls\MIMSButton.xaml.cs">
+      <DependentUpon>MIMSButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Controls\MIMSFooter.xaml.cs">
+      <DependentUpon>MIMSFooter.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Common\Controls\MIMSGroupedListView - Copy.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <Compile Update="PartEnquiry\Result\ResultView.xaml.cs">
+      <DependentUpon>ResultView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PartEnquiry\Enquire\EnquireView.xaml.cs">
+      <DependentUpon>EnquireView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BinEnquiry\Enquire\EnquireView.xaml.cs">
+      <DependentUpon>EnquireView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="BinEnquiry\Result\ResultView.xaml.cs">
+      <DependentUpon>ResultView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ConnectionView.xaml.cs">
+      <DependentUpon>ConnectionView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

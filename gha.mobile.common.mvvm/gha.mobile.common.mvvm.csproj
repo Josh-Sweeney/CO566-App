@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2478" />
+    <PackageReference Include="Plugin.DeviceOrientation" Version="1.0.7" />
+    <PackageReference Include="ZXing.Net.Mobile.Forms" Version="2.4.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gha.mobile.common.repositories\gha.mobile.common.repositories.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.helpers\gha.mobile.common.helpers.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.converters\gha.mobile.common.converters.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.entities\gha.mobile.common.entities.csproj" />
+    <ProjectReference Include="..\gha.mobile.common.resolver\gha.mobile.common.resolver.csproj" />
+    <ProjectReference Include="..\gha.mobile.mims.repositories\gha.mobile.mims.repositories.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="LicenseServerHelper">
+      <HintPath>..\assemblies\LicenseServerHelper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\ResourceDictionary.xaml.cs">
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
